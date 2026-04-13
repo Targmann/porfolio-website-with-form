@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Jacob Steimle">
+    <meta name="description" content="A webpage about The Universal Language">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/light-theme.css">
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="css/form-style-light.css">
+    <title>The Universal Language</title>
+</head>
+<body>
+    <!-- Page content -->
+    <div class="main">
+        <!-- Change theme button -->
+        <button id="theme-btn">Change Theme</button>
+        <!-- Title and logo -->
+        <header class="header">
+            <img src="logo.png" id="logo">
+            <img src="calligraphy-title-dark.png" id="title">
+        </header>
+        <!-- Menu sidebar -->
+        <nav class="menu">
+            <a href="#" onclick="showSection('about');">About</a>
+            <a href="#" onclick="showSection('artwork');">Artwork</a>
+            <a href="#" onclick="showSection('music');">Music</a>
+            <a href="#" onclick="showSection('media');">Media</a>
+            <a href="#" onclick="showSection('contact');">Contact</a>
+            <a href="#" onclick="showSection('form');">Log Visit</a>
+        </nav>
+        <!-- Main content container -->
+        <div class="content">
+            <!-- About section -->
+            <section id="about">
+                <h2>About</h2>
+                <div class="text-with-img">
+                    <p>Jacob Steimle is a neo-orchestral composer and producer based in Utah, originally from San Diego, California. Raised in a musical household, he began piano lessons at a young age under the guidance of his mother, a self-taught pianist. Over time, his curiosity led him to teach himself a wide variety of additional instruments, including ukulele, Irish whistle, trumpet, and mandolin.
+                    <br><br>
+                    Immersed in classical music throughout his childhood, Jacob developed a particular love for cinematic soundtracks, drawn to their ability to tell stories without words. As a pre-teen, he began composing simple piano pieces using notation software, gradually expanding into MIDI orchestration. What started as experimentation evolved into a deep commitment to the craft.
+                    <br><br>
+                    After years of practice, he transitioned to a full digital audio workstation environment, refining his skills in composition, recording, mixing, mastering, and production. At 18, he completed his first full-length album, Philharmonia, marking a major milestone in his artistic journey.
+                    <br><br>
+                    He releases music under the name The Universal Language, a project built on the belief that music transcends culture, background, and borders. Through his work, Jacob aims to create sound that connects, communicates, and resonates universally. No matter where someone is or where they come from, music can meet them there.</p>
+                    <img src="portrait.jpg" alt="Portrait of Jacob Steimle" class="portrait">
+                </div>
+            </section>
+            <!-- Artwork section -->
+            <section id="artwork" class="hidden">
+                <h2>Artwork</h2>
+                <div id="figures">
+                    <figure>
+                        <a href="thunder-image.jpg" target="_blank"><img src="thunder-image.jpg"></a>
+                        <figcaption>Unreleased</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="philharmonia-image.jpg" target="_blank"><img src="philharmonia-image.jpg"></a>
+                        <figcaption>2022</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="nebula-image.jpg" target="_blank"><img src="nebula-image.jpg"></a>
+                        <figcaption>Uncreated</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="itnoh-image.jpg" target="_blank"><img src="itnoh-image.jpg"></a>
+                        <figcaption>Unreleased</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="botmp-image.jpg" target="_blank"><img src="botmp-image.jpg"></a>
+                        <figcaption>Coming soon!</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="iwwwj-image.jpg" target="_blank"><img src="iwwwj-image.jpg"></a>
+                        <figcaption>2025</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="dcg-image.jpg" target="_blank"><img src="dcg-image.jpg"></a>
+                        <figcaption>Unreleased</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="tale-image.jpg" target="_blank"><img src="tale-image.jpg"></a>
+                        <figcaption>Coming soon!</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <!-- Music section -->
+            <section id="music" class="hidden">
+                <h2>Music</h2>
+                <p>Stream or purchase music by The Universal Language on all major platforms worldwide.</p>
+                <div class="icons">
+                    <a href="https://open.spotify.com/artist/39QTFcjeiB91gqS8u1P2Et" target="_blank"><img src="spotify-icon.png"></a>
+                    <a href="https://music.apple.com/us/artist/the-universal-language/1627076234" target="_blank"><img src="apple-music-icon.png"></a>
+                    <a href="https://music.amazon.com/artists/B0B2SHW4C4/the-universal-language" target="_blank"><img src="amazon-icon.png"></a>
+                    <a href="https://music.youtube.com/channel/UC7S2ur2HYU-NrZ05JGygcTQ" target="_blank"><img src="youtube-music-icon.png"></a>
+                    <a href="https://theuniversallanguage.bandcamp.com/album/philharmonia" target="_blank"><img src="bandcamp-icon.png"></a>
+                    <a href="https://soundcloud.com/theuniversallanguage" target="_blank"><img src="soundcloud-icon.png"></a>
+                    <a href="https://www.patreon.com/profile/creators?u=72797906" target="_blank"><img src="patreon-icon.webp"></a>
+                </div>
+                <iframe data-testid="embed-iframe" style="border-radius:12px;margin-top:60px;" src="https://open.spotify.com/embed/artist/39QTFcjeiB91gqS8u1P2Et?utm_source=generator&theme=0" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </section>
+            <!-- Media section (YouTube video) -->
+            <section id="media" class="hidden">
+                <h2>Media</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TtzD8WRhOFc?si=DL9CCLzEov0tQeFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            <!-- Contact section -->
+            <section id="contact" class="hidden">
+                <h2>Contact</h2>
+                <div class="contact-icon">
+                    <img src="phone-icon-dark.png" id="phone-icon">
+                    <p>(555) 555-555</p>
+                </div>
+                <div class="contact-icon">
+                    <img src="email-icon.png">
+                    <p>email@domain.ext</p>
+                </div>
+                <div class="contact-icon">
+                    <img src="address-icon-dark.png" id="address-icon">
+                    <p>123 Main St, City, STATE</p>
+                </div>
+            </section>
+            <section id="form" class="hidden">
+                <h1>Visitor Form</h1>
+                <div id="success" class="successMsg" style="display:none">
+                    <br><br><br><br>
+                    Thank you!
+                </div>
+                <form id="visitor-form" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+                    <div class="form-columns">
+                    <ul class="left">
+                        <li class="section-display">
+                            <label>
+                                First Name
+                                <input type="text" name="first" placeholder="John">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li >
+                            <label>
+                                Last Name
+                                <input type="text" name="last" placeholder="Doe">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li >
+                            <label>
+                                Address Line 1
+                                <input type="text" name="address1" placeholder="123 Main St">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li >
+                            <label>
+                                Address Line 2:
+                                <input type="text" name="address2" placeholder="Apartment, suite, unit, etc." class="optional">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li >
+                            <label>
+                                City
+                                <input type="text" name="city" placeholder="Salt Lake City">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li >
+                            <label>
+                                State
+                                <input type="text"  name="state" placeholder="UT">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li >
+                            <label>
+                                ZIP Code:
+                                <input type="text" name="zip" placeholder="84101">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        </ul>
+                        <ul class="right">
+                        <li>
+                            <label>
+                                Email Address
+                                <input type="text" name="email" placeholder="mail@domain.ext">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li>
+                            <label>
+                                Phone Number
+                                <input type="text" name="phone" placeholder="555-555-5555">
+                            </label>
+                            <div class="errorMsg"></div>
+                        </li>
+                        <li class="inline-options">
+                            How did you find out about this site?
+                            <label>
+                                <input type="checkbox" name='source' value="google">
+                                Google Search
+                            </label>
+                            <label>
+                                <input type="checkbox" name='source' value="friend">
+                                Friend or Family
+                            </label>
+                            <label>
+                                <input type="checkbox" name='source' value="other">
+                                Other
+                            </label>
+                            <div class="errorMsg"></div>
+                            <label>Specify</label>
+                            <input type="text" name="spec" class="optional">
+                        </li>
+                        <li>
+                            <label>Comments
+                                <textarea rows="5"></textarea>
+                            </label>
+                        </li>
+                        <li>
+                            <button type="submit">Submit</button>
+                        </li>
+                    </ul>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- Footer with copyright info -->
+        <footer>Copyright © 2026 The Universal Language | All Rights Reserved</footer>
+    <script src="js/page.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validate.js"></script>
+</body>
+</html>

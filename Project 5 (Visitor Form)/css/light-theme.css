@@ -1,0 +1,257 @@
+/*
+Changes:
+- (Most changes addressed in styles.css apply here)
+- Added a white "light theme" version (with button to toggle)
+- Changed grid to have a horizontal tab on top
+- Changed hover effects
+- Added flex-wrap for the portrait, artwork figures, and icons
+- Aligned figures in artwork section differently to stay centered during responsive resizing
+*/
+* {
+    max-width: 100%;
+}
+:root {
+    --deep-gray: rgb(15, 15, 15);
+}
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: grid;
+    grid-template-areas:
+        "change change"
+        "header menu"
+        "content content"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    color: var(--deep-gray);
+}
+#theme-btn {
+    grid-area: change;
+    background-color: white;
+    border: none;
+    color: var(--deep-gray);
+    width: 100%;
+    padding: 1rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--deep-gray);
+    transition: 0.2s;
+}
+#theme-btn:hover {
+    color: gray;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+}
+.header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#logo {
+    width: 100px;
+}
+#title {
+    width: 470px;
+}
+nav {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: left;
+    align-items: center;
+    gap: 50px;
+}
+nav a {
+    color: var(--deep-gray);
+    text-decoration: none;
+    padding: 1rem 0;
+}
+nav a:hover {
+    color: gray;
+}
+a, img, figure {
+    transition: 0.2s;
+}
+.content {
+    border: 2px solid var(--deep-gray);
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(16px, 5vw, 100px);
+}
+section h2 {
+    font-size: 35px;
+    margin: 50px 0;
+}
+section p {
+    line-height: 30px;
+}
+section figure {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+section img {
+    width: 180px;
+}
+section figure:hover {
+    transform: scale(1.1);
+}
+#figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+#figures figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+figcaption {
+    color: gray;
+    margin-top: 1rem;
+    text-align: center;
+}
+.text-with-img {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+.portrait {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+}
+.portrait:hover {
+    cursor: default;
+    transform: none;
+}
+.icons {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.icons a {
+    width: 60px;
+    height: 60px;
+}
+.icons img {
+    margin: -2px -2px;
+    width: 60px;
+    border-radius: 50%;
+}
+.icons img:hover {
+    transform: scale(1.2);
+}
+.contact-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+.contact-icon img {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+}
+.contact-icon p {
+    margin: 0;
+    word-break: break-word;
+}
+#phone-icon {
+    width: 50px;
+}
+.contact-icon img:hover {
+    cursor: default;
+    transform: none;
+}
+a:hover {
+    cursor: pointer;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+/*
+Between here and the media query is new stuff
+*/
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .main {
+        display: grid;
+        grid-template-areas:
+            "change"
+            "header"
+            "menu"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding-bottom: 50px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    section h2 {
+        margin-top: 50px;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    nav a {
+        width: inherit;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .text-with-img {
+        flex-direction: column;
+        align-items: center;
+    }
+}

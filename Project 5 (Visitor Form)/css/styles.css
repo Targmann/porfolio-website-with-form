@@ -1,0 +1,227 @@
+/*
+Changes:
+- Fixed responsive overflow issues
+- Made minor positioning adjustments to header
+- Removed background of footer (drew too much attention)
+- Reworked CSS to remove hard margins, padding, and pixel units
+- Focused more on flexbox positioning and responsive percentage-based sizes
+- Added a button to change the theme
+- Added box sizing
+*/
+:root {
+    --pale-gray: rgb(240, 240, 240);
+}
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: grid;
+    grid-template-areas:
+        "change change"
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 1fr 4fr;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    background-color: black;
+    color: var(--pale-gray);
+}
+#theme-btn {
+    grid-area: change;
+    background-color: black;
+    border: none;
+    width: 100%;
+    padding: 1rem 0;
+    color: var(--pale-gray);
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+#theme-btn:hover {
+    background-color: var(--pale-gray);
+    color: black;
+    cursor: pointer;
+}
+.header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#logo {
+    width: 150px;
+}
+#title {
+    margin-top: 15px;
+    width: 600px;
+}
+nav {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav a {
+    color: var(--pale-gray);
+    text-decoration: none;
+    padding: 2rem;
+}
+nav a:hover {
+    background-color: var(--pale-gray);
+    color: black;
+}
+a, img, figure {
+    transition: 0.2s;
+}
+.content {
+    grid-area: content;
+    display: flex;
+    padding: 30px 100px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section h2 {
+    font-size: 35px;
+    margin: 50px 0;
+}
+section p {
+    line-height: 30px;
+}
+section figure {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+section img {
+    width: 180px;
+}
+section figure:hover {
+    transform: scale(1.1);
+}
+figcaption {
+    position: absolute;
+    margin-top: 220px;
+    color: gray;
+}
+.text-with-img {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.portrait {
+    margin-top: 25px;
+    width: 300px;
+}
+.portrait:hover {
+    cursor: default;
+    transform: none;
+}
+.icons {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.icons a {
+    width: 60px;
+    height: 60px;
+}
+.icons img {
+    margin: -2px -2px;
+    width: 60px;
+    border-radius: 50%;
+}
+.icons img:hover {
+    transform: scale(1.2);
+}
+.contact-icon {
+    display: flex;
+    align-items: center;
+    margin: 50px 20px;
+}
+.contact-icon p {
+    position: absolute;
+    margin-left: 80px;
+}
+.contact-icon img {
+    width: 40px;
+}
+.contact-icon img:hover {
+    cursor: default;
+    transform: none;
+}
+a:hover {
+    cursor: pointer;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+/*
+Between here and the media query is new stuff
+*/
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .main {
+        display: grid;
+        grid-template-areas:
+            "change"
+            "header"
+            "menu"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    section h2 {
+        margin-top: 50px;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    nav a {
+        width: inherit;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .text-with-img {
+        flex-direction: column;
+        align-items: center;
+    }
+}
